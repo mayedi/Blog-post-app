@@ -2,6 +2,7 @@ import BaseRoutes from "./base/BaseRouter";
 import BlogpostController from "../controller/BlogpostController";
 import validate from "../helper/validate";
 import { createBlogPostSchema, updateBlogPostSchema } from "../schema/BlogpostSchema";
+import express from "express";
 
 class BlogpostRoutes extends BaseRoutes {
   public routes(): void {
@@ -17,4 +18,4 @@ class BlogpostRoutes extends BaseRoutes {
   }
 }
 
-export default new BlogpostRoutes().router
+export default new BlogpostRoutes().router as express.Router
